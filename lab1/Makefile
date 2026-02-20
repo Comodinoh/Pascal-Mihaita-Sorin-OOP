@@ -1,4 +1,4 @@
-PROBLEMS=problem1 problem2 problem3
+PROBLEMS=problem1 problem2 problem3 extra
 
 .phony: all clean
 
