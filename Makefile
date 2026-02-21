@@ -2,6 +2,9 @@ CC=gcc
 CXX=g++
 CFLAGS=-Wall -g
 SUBDIRS=lab1
+MAKEFLAGS += --no-print-directory
+
+export
 
 .PHONY: all clean
 

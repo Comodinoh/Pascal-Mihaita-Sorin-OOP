@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 {
     char input[] = "---H***E+++L+++L///O---P+++O/+-**O---";
     func Operatori[] = {Sum, Dif, Mul, Div};
-    int S, V;
+    int S = 0, V;
     Content x;
     int idx;
 

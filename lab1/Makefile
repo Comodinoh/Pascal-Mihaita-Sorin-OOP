@@ -6,11 +6,11 @@ PROBLEMS=problem1 problem2 problem3 extra
 all:
 	@for dir in $(PROBLEMS); do\
 		echo "Building $$dir..."; \
-		$(MAKE) -s -C $$dir; \
+		$(MAKE) -C $$dir; \
 	done
 
 clean:
 	@for dir in $(PROBLEMS); do \
 		echo "Cleaning $$dir..."; \
-		$(MAKE) -s -C $$dir clean; \
+		$(MAKE) -C $$dir clean; \
 	done

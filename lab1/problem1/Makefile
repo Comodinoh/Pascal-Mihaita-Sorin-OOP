@@ -1,5 +1,5 @@
 build: main.o
-	$(CC) -o lab1problem1 main.o
+	$(CC) $(CFLAGS) -o lab1problem1 main.o
 
 main.o: main.c
 
