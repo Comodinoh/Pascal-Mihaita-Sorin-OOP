@@ -1,7 +1,7 @@
 CC=gcc
 CXX=g++
 CFLAGS=-Wall -g
-SUBDIRS=lab1
+SUBDIRS=lab1 lab2
 MAKEFLAGS += --no-print-directory
 
 export
