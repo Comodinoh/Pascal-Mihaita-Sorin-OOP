@@ -15,4 +15,5 @@ MovieSeries.o: MovieSeries.cpp
 
 clean:
 	rm -f main.o Movie.o MovieCmp.o MovieSeries.o
+	rm -f lab2extra
 
