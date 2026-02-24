@@ -15,3 +15,6 @@ If you want to cleanup the executables and object files, simply run:
 ```bash
 make clean
 ```
+
+# Want to integrate with Clangd?
+If you want to generate a JSON compile\_commands.json database to integrate with clangd or any other lsp you're using, you can use https://github.com/rizsotto/Bear.git
