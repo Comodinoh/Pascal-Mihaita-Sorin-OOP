@@ -2,8 +2,8 @@
 #include <iostream>
 #include <algorithm>
 
-const std::string& Student::GetName() const {return m_name;}
-void Student::SetName(const std::string& name) {
+const char* Student::GetName() const {return m_name;}
+void Student::SetName(const char* name) {
     m_name = name;
 }
 

@@ -3,8 +3,8 @@
 
 class Student {
 public:
-    const std::string& GetName() const;
-    void SetName(const std::string& name);
+    const char* GetName() const;
+    void SetName(const char* name);
 
     float GetMathGrade() const;
     float GetEnglishGrade() const;
@@ -17,7 +17,7 @@ public:
 
     void Print();
 private:
-    std::string m_name;
+    const char* m_name;
     float m_math;
     float m_english;
     float m_history;
