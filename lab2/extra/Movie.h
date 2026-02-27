@@ -1,6 +1,6 @@
 #pragma once
 
-#define MOVIE_NAME_MAX_CHARACTERS 256
+static constexpr int MOVIE_MAX_CHARACTERS = 256;
 
 class Movie {
 public:
@@ -18,7 +18,7 @@ public:
 
     int get_passed_years() const;
 private:
-    char m_name[MOVIE_NAME_MAX_CHARACTERS];
+    char m_name[MOVIE_MAX_CHARACTERS];
 
     int m_year;
     int m_length;

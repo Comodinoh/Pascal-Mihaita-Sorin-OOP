@@ -1,6 +1,7 @@
 CC=gcc
 CXX=g++
-CFLAGS=-Wall -g
+CFLAGS=-Wall -ggdb
+CXXFLAGS=$(CFLAGS)
 SUBDIRS=lab1 lab2
 MAKEFLAGS += --no-print-directory
 

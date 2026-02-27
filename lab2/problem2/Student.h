@@ -1,8 +1,9 @@
 #pragma once
-#include <string>
 
 class Student {
 public:
+    ~Student();
+
     const char* GetName() const;
     void SetName(const char* name);
 
@@ -13,11 +14,11 @@ public:
     void SetEnglishGrade(float grade);
     void SetHistoryGrade(float grade);
 
-    float GetAverageGrade() const ;
+    float GetAverageGrade() const;
 
     void Print();
 private:
-    const char* m_name;
+    char* m_name = nullptr;
     float m_math;
     float m_english;
     float m_history;

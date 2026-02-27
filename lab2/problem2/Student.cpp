@@ -1,10 +1,19 @@
 #include "Student.h"
 #include <iostream>
 #include <algorithm>
+#include <cstring>
+#include <cstdlib>
+
+Student::~Student() {
+    if(m_name != nullptr) free(m_name);
+}
 
 const char* Student::GetName() const {return m_name;}
 void Student::SetName(const char* name) {
-    m_name = name;
+    if(m_name == nullptr || strlen(m_name) < strlen(name)) {
+        m_name = (char*)realloc(m_name, sizeof(char)*strlen(name));
+    }
+    strcpy(m_name, name);
 }
 
 float Student::GetMathGrade() const {
