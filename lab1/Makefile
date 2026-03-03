@@ -4,12 +4,12 @@ PROBLEMS=problem1 problem2 problem3 extra
 
 all:
 	@for dir in $(PROBLEMS); do\
-		echo "Building $$dir..."; \
+		echo -e "$(GREEN)Building $$dir...$(RESET)"; \
 		$(MAKE) -C $$dir; \
 	done
 
 clean:
 	@for dir in $(PROBLEMS); do \
-		echo "Cleaning $$dir..."; \
+		echo -e "$(GREEN)Cleaning $$dir...$(RESET)"; \
 		$(MAKE) -C $$dir clean; \
 	done
