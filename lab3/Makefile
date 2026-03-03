@@ -1,0 +1,15 @@
+PROBLEMS=problem1
+
+.PHONY: all clean
+
+all:
+	@for dir in $(PROBLEMS); do\
+		echo "Building $$dir..."; \
+		$(MAKE) -C $$dir; \
+	done
+
+clean:
+	@for dir in $(PROBLEMS); do \
+		echo "Cleaning $$dir..."; \
+		$(MAKE) -C $$dir clean; \
+	done

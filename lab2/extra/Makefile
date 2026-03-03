@@ -3,7 +3,7 @@
 CXXFLAGS=--std=c++20
 
 all: main.o Movie.o MovieCmp.o MovieSeries.o
-	$(CXX) $(CFLAGS) --std=c++20 -o lab2extra main.o Movie.o MovieCmp.o MovieSeries.o
+	$(CXX) $(CXXFLAGS) -o lab2extra main.o Movie.o MovieCmp.o MovieSeries.o
 
 main.o: main.cpp
 

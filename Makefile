@@ -1,8 +1,8 @@
 CC=gcc
 CXX=g++
 CFLAGS=-Wall -ggdb
-CXXFLAGS=$(CFLAGS)
-SUBDIRS=lab1 lab2
+CXXFLAGS=$(CFLAGS) --std=c++23
+SUBDIRS=lab1 lab2 lab3
 MAKEFLAGS += --no-print-directory
 
 export
