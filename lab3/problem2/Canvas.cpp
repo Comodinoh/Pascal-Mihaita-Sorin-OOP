@@ -154,7 +154,7 @@ void Canvas::DrawLine(int x1, int y1, int x2, int y2, char ch) {
 void Canvas::Print() {
     for(int y = 0; y < m_height; y++) {
         for(int x = 0; x < m_width; x++) {
-            std::print("{}", m_canvas[y][x]);
+            std::print("\x1B[48;2m{}", m_canvas[y][x]);
         }
         std::print("\n");
     }

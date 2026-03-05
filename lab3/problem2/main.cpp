@@ -18,34 +18,42 @@ double getms(std::timespec* spec) {
 
 int main() {
 
-    Canvas canvas = Canvas(80, 40);
+    Canvas canvas = Canvas(80, 29);
 
-    long long t = 0;
+    double t = 0;
     double accumulator = 0.0;
     std::timespec spec;
-    double now = getms(&spec);
-    double last = 0.0;
+    double now;
+    double last = getms(&spec);
 
     while(true) {
         now = getms(&spec);
         double passed_time = now-last;
-        last = now;
         accumulator += passed_time;
-
-        system("clear");
-        while(accumulator >= 1/30.0) {
-            int x = abs(floor(cos(t*(1/30.0))*40.0));
-
-            canvas.DrawLine(0, 0, x, 39 , '+');
-            canvas.Print();
+        while(accumulator >= 16.66) {
+            double factor = (cos(t*10) + 1) / 2.0;
+            int x = 0;
+        
             canvas.Clear();
+            int width = 20;
+            int height = 10;
+            int y = 10;
+            int size = 15;
+            // Surprise
+            //canvas.DrawLine(30, 10+height/2, 40 + size, 11+height/2, '#');
+            //canvas.SetPoint(40 + size - 1, 10+height/2 - 1, 'O');
+            //canvas.SetPoint(40 + size - 1, 10+height/2 + 1, 'O');
+            canvas.DrawRect(x, y, x + width*factor*2.0, y + height, '+');
+            canvas.Print();
+            t += M_PI / 180.0;
 
-            accumulator -= 1/30.0;
+            accumulator -= 16.66;
         }
     
         
-        t++;
+
+        last = now;
     }
-    canvas.Print();
+
     return 0;
 }
